@@ -26,7 +26,7 @@ function isAdminOrSub(sender) { const s = normalizeBare(sender); const adminBare
 function isOnlyAdmin(sender) { const s = normalizeBare(sender); const adminBare = normalizeBare(config.admin); return s === adminBare; }
 
 async function connectBot() {
-    const { state, saveCreds } = await useMultiFileAuthState('/etc/secrets');
+    const { state, saveCreds } = await useMultiFileAuthState('auth_info');
     const latest = await fetchLatestBaileysVersion();
     const version = Array.isArray(latest) ? latest[0] : (latest.version || latest);
     if (proto && typeof proto === 'object') {
