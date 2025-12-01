@@ -418,7 +418,6 @@ Subadmins: ${subsLabel}
 /stopnc               Stop NC
 /setncdelay <sec>     Set NC delay (per group)
 /status               Show status
-/restart              Clear all state
 /menu
 /help
 `, ...quoted });
